@@ -10,4 +10,5 @@ h1 {
 
 #gameCanvas {
   border: 1px solid magenta;
+  border-radius: 10px;
 }
