@@ -1,31 +1,17 @@
-# Game Time Starter Kit
+# Bubble Spinner
 
-To install the dependencies:
+[Marla Brizel](http://github.com/marlabrizel) | [Lovisa Svallingson](http://github.com/applegrain)
 
-```
-npm install
-```
+A JavaScript game in the browser inspired by Bubble Spinner (see link below).
 
-To fire up a development server:
+[Original Game](http://www.deadwhale.com/play.php?game=774)
 
-```
-npm start
-```
+#### Instructions
 
-Once the server is running, you can visit:
-
-* `http://localhost:8080/webpack-dev-server/` to run your application.
-* `http://localhost:8080/webpack-dev-server/test.html` to run your test suite in the browser.
-
-To build the static files:
-
-```js
-npm build
-```
-
-
-To run tests in Node:
-
-```js
-npm test
-```
+* To install the dependencies: `$ npm install`
+* To fire up a development server: `$ npm start`
+* Once the server is running, you can visit:
+  * `http://localhost:8080/webpack-dev-server/` to run your application.
+  * `http://localhost:8080/webpack-dev-server/test.html` to run your test suite in the browser.
+* To build the static files:`$ npm build`
+* To run tests in Node: `$ npm test`
