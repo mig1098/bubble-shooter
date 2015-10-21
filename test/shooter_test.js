@@ -1,6 +1,7 @@
 const chai    = require('chai');
 const assert  = chai.assert;
 const Shooter = require('../lib/shooter');
+const Board = require('../lib/board');
 
 describe('Shooter', function () {
   it('should instantiate at the bottom of the canvas with x & y coordinates, and a radius', function () {
@@ -36,9 +37,30 @@ describe('Shooter', function () {
   });
 
   it('cannot move past the left boundary', function () {
-    let shooter = new Shooter(10, 440, 10);
+    let shooter = new Shooter(20, 440, 10);
     shooter.moveLeft();
+    assert.equal(shooter.x, 15);
 
+    shooter.moveLeft();
     assert.equal(shooter.x, 10);
+  });
+
+  it('cannot move past the right boundary', function() {
+    let shooter = new Shooter(430, 440, 10);
+    shooter.moveRight();
+    assert.equal(shooter.x, 435);
+
+    shooter.moveRight();
+    assert.equal(shooter.x, 440);
+  });
+
+  it('shoots the ball when the spacebar is pressed', function() {
+    let board   = new Board(450, 450);
+    let shooter = new Shooter(430, 440, 10);
+
+    board.spaceBarWasPressed(shooter);
+
+    assert.notEqual(shooter.x, 430);
+    assert.equal(shooter.x, 431);
   });
 });
