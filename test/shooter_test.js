@@ -1,7 +1,7 @@
 const chai    = require('chai');
 const assert  = chai.assert;
 const Shooter = require('../lib/shooter');
-const Board = require('../lib/board');
+const Board   = require('../lib/board');
 
 describe('Shooter', function () {
   it('should instantiate at the bottom of the canvas with x & y coordinates, and a radius', function () {
