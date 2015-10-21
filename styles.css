@@ -1,14 +1,17 @@
 body {
   text-align: center;
   margin-top: 10%;
+  background-color: lightblue;
   font-family: 'Pacifico', cursive;
 }
 
 h1 {
   color: magenta;
+  font-size: 30pt;
 }
 
 #gameCanvas {
   border: 1px solid magenta;
   border-radius: 10px;
+  background-color: #FFFFF0;
 }
