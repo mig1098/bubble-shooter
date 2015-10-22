@@ -1,17 +1,39 @@
 body {
+  padding-top: 8%;
   text-align: center;
-  margin-top: 10%;
-  background-color: lightblue;
-  font-family: 'Pacifico', cursive;
+  width: 90%;
+
+  background-image: url('http://columbineandcompany.com/wp-content/uploads/Bright-Soap-Bubbles2.jpg');
+  background-size: cover;
+
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20pt;
 }
 
-h1 {
-  color: magenta;
-  font-size: 30pt;
+.dashboard {
+  display: inline-block;
+  width: 40%;
+  height: 450px;
+  padding: 1%;
+  border-radius: 10px;
+}
+
+.dashboard h1, h3 {
+  margin: 0 auto;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.dashboard h3 {
+  margin-top: 5%;
+}
+
+.game {
+  float: right;
 }
 
 #gameCanvas {
-  border: 1px solid magenta;
+  border: 10px solid white;
   border-radius: 10px;
-  background-color: #FFFFF0;
+  background-color: rgba(225, 225, 225, 0.7);
 }

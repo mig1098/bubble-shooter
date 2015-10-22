@@ -4,15 +4,17 @@
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   <meta charset="utf-8">
   <title>Bubble Spinner</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico|Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <div class="board">
-        <h1>Bubble Spinner</h1>
-        <h2>How to Play: </h2><h3>Make connections of three or more like-colored balls to clear them from the board. Try to clear the board before the bubbles touch the edges!
-</h3>
-        <canvas id="gameCanvas" width="450px" height="450px"></canvas>
+  <div class="dashboard">
+    <h1>Bubble Spinner</h1>
+    <h3>Connect three or more bubbles of the same color to clear them from the board. Clear the board before they reach the bottom!</h3>
+  </div>
+
+  <div class="game">
+    <canvas id="gameCanvas" width="450px" height="450px"></canvas>
   </div>
 
   <script src="main.bundle.js"></script>
