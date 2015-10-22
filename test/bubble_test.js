@@ -1,6 +1,7 @@
 const chai   = require('chai');
 const assert = chai.assert;
 const Bubble = require('../lib/bubble');
+const Board = require('../lib/board');
 
 describe('Bubble', function() {
   it('should instantiate with x & y coordinates, and a radius', function () {
