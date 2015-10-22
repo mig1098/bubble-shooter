@@ -37,18 +37,18 @@ describe('Shooter', function () {
   });
 
   it('cannot move past the left boundary', function () {
-    let shooter = new Shooter(20, 440, 10);
+    let shooter = new Shooter(15, 440, 10);
     shooter.moveLeft();
-    assert.equal(shooter.x, 15);
+    assert.equal(shooter.x, 10);
 
     shooter.moveLeft();
     assert.equal(shooter.x, 10);
   });
 
   it('cannot move past the right boundary', function() {
-    let shooter = new Shooter(430, 440, 10);
+    let shooter = new Shooter(435, 440, 10);
     shooter.moveRight();
-    assert.equal(shooter.x, 435);
+    assert.equal(shooter.x, 440);
 
     shooter.moveRight();
     assert.equal(shooter.x, 440);
@@ -56,11 +56,11 @@ describe('Shooter', function () {
 
   it('shoots the ball when the spacebar is pressed', function() {
     let board   = new Board(450, 450);
-    let shooter = new Shooter(430, 440, 10);
+    let shooter = new Shooter(225, 10, 10);
 
     board.spaceBarWasPressed(shooter);
 
-    assert.notEqual(shooter.x, 430);
-    assert.equal(shooter.x, 431);
+    assert.notEqual(shooter.y, 10);
+    assert.equal(shooter.y, 11);
   });
 });
