@@ -2,6 +2,7 @@ const chai    = require('chai');
 const assert  = chai.assert;
 const Shooter = require('../lib/shooter');
 const Board   = require('../lib/board');
+const Bubble  = require('../lib/bubble');
 
 describe('Shooter', function () {
   it('should instantiate at the bottom of the canvas with x & y coordinates, and a radius', function () {
@@ -62,5 +63,35 @@ describe('Shooter', function () {
 
     assert.notEqual(shooter.y, 10);
     assert.equal(shooter.y, 11);
+  });
+
+  it('stops traveling when it hits the opposite wall', function () {
+    let board   = new Board(450, 450);
+    let shooter = new Shooter(225, 439, 10);
+
+    board.spaceBarWasPressed(shooter).spaceBarWasPressed(shooter);
+
+    assert.equal(shooter.y, 440);
+  });
+
+  it('stops traveling when it hits another bubble', function () {
+    let board   = new Board(450, 450);
+    let bubble  = new Bubble(225, 20, 10);
+    let shooter  = new Shooter(225, 10, 10);
+
+    board.spaceBarWasPressed(shooter);
+
+    assert.equal(shooter.y, 10);
+  });
+
+  it.skip('becomes a bubble when it hits another bubble', function() {
+    let board   = new Board(450, 450);
+    let bubble  = new Bubble(12, 440, 10);
+    let shooter = new Shooter(10, 440, 10);
+
+    board.spaceBarWasPressed(shooter);
+
+    assert.equal(shooter.x, 11);
+    assert.equal(bubble.x, 12);
   });
 });
