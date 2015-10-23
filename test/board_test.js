@@ -6,9 +6,9 @@ const Shooter  = require('../lib/shooter');
 
 describe('Board', function () {
 
-  beforeEach(function() {
-    sinon.spy(Bubble.prototype, 'draw');
-  });
+  // beforeEach(function() {
+  //   sinon.spy(Bubble.prototype, 'draw');
+  // });
 
   it('can find its own boundaries', function () {
     let board = new Board(450, 450);
@@ -19,10 +19,12 @@ describe('Board', function () {
 
   it('creates a new bubble upon shoot', function () {
     let board = new Board(450, 450);
+    let shooter = new Shooter(225, 10, 10);
+    // let bubble = new Bubble(225, 10, 10);
 
-    board.spaceBarWasPressed();
+    board.spaceBarWasPressed(shooter);
 
-    assert(Bubble.prototype.draw.calledOnce());
+    assert(spy.calledOnce());
   });
 
   it.skip('changes the shooter color upon shoot', function () {
@@ -34,7 +36,7 @@ describe('Board', function () {
     // assert that color has changed
   });
 
-  afterEach(function() {
-    Bubble.prototype.draw.restore();
-  });
+  // afterEach(function() {
+  //   Bubble.prototype.draw.restore();
+  // });
 });
