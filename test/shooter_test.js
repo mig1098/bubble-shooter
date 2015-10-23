@@ -46,6 +46,13 @@ describe('Shooter', function () {
     assert.equal(shooter.x, 10);
   });
 
+  it('can move right if on the left boundary', function() {
+    let shooter = new Shooter(10, 440, 10);
+    shooter.moveRight();
+
+    assert.equal(shooter.x, 15);
+  });
+
   it('cannot move past the right boundary', function() {
     let shooter = new Shooter(435, 440, 10);
     shooter.moveRight();
@@ -55,9 +62,16 @@ describe('Shooter', function () {
     assert.equal(shooter.x, 440);
   });
 
+  it('can move left if on the right boundary', function() {
+    let shooter = new Shooter(440, 440, 10);
+    shooter.moveLeft();
+
+    assert.equal(shooter.x, 435);
+  });
+
   it('shoots the ball when the spacebar is pressed', function() {
     let board   = new Board(450, 450);
-    let shooter = new Shooter(225, 10, 10);
+    let shooter = new Shooter(225, 440, 10);
 
     board.spaceBarWasPressed(shooter);
 
