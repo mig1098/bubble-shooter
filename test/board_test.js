@@ -18,7 +18,7 @@ describe('Board', function () {
 
   it('creates a new bubble upon shoot', function () {
     let board = new Board(450, 450);
-    let shooter = new Shooter(225, 10, 10);
+    let shooter = new shooter(225, 10, 10);
     // let bubble = new Bubble(225, 10, 10);
 
     board.shooterWasPressed(shooter);
@@ -28,7 +28,7 @@ describe('Board', function () {
 
   it.skip('changes the shooter color upon shoot', function () {
     let board = new Board(450, 450);
-    let shooter = new Shooter(225, 10, 10);
+    let shooter = new shooter(225, 10, 10);
 
     board.shoot(shooter);
 
