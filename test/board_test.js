@@ -2,7 +2,6 @@ const chai   = require('chai');
 const assert = chai.assert;
 const Board  = require('../lib/board');
 const Bubble  = require('../lib/bubble');
-const Shooter  = require('../lib/shooter');
 
 describe('Board', function () {
 
@@ -19,17 +18,17 @@ describe('Board', function () {
 
   it('creates a new bubble upon shoot', function () {
     let board = new Board(450, 450);
-    let shooter = new Shooter(225, 10, 10);
+    let shooter = new shooter(225, 10, 10);
     // let bubble = new Bubble(225, 10, 10);
 
-    board.spaceBarWasPressed(shooter);
+    board.shooterWasPressed(shooter);
 
     assert(spy.calledOnce());
   });
 
   it.skip('changes the shooter color upon shoot', function () {
     let board = new Board(450, 450);
-    let shooter = new Shooter(225, 10, 10);
+    let shooter = new shooter(225, 10, 10);
 
     board.shoot(shooter);
 
