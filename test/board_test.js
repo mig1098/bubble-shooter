@@ -22,7 +22,7 @@ describe('Board', function () {
     let shooter = new Shooter(225, 10, 10);
     // let bubble = new Bubble(225, 10, 10);
 
-    board.spaceBarWasPressed(shooter);
+    board.shooterWasPressed(shooter);
 
     assert(spy.calledOnce());
   });

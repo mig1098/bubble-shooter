@@ -73,7 +73,7 @@ describe('Shooter', function() {
     let board   = new Board(450, 450);
     let shooter = new Shooter(225, 440, 10);
 
-    board.spaceBarWasPressed(shooter);
+    board.shooterWasPressed(shooter);
 
     assert.notEqual(shooter.y, 10);
     assert.equal(shooter.y, 11);
@@ -83,7 +83,7 @@ describe('Shooter', function() {
     let board   = new Board(450, 450);
     let shooter = new Shooter(225, 11, 10);
 
-    board.spaceBarWasPressed(shooter).spaceBarWasPressed(shooter);
+    board.shooterWasPressed(shooter).shooterWasPressed(shooter);
 
     assert.equal(shooter.y, 10);
   });
@@ -93,7 +93,7 @@ describe('Shooter', function() {
     let bubble  = new Bubble(225, 439, 10);
     let shooter  = new Shooter(225, 440, 10);
 
-    board.spaceBarWasPressed(shooter);
+    board.shooterWasPressed(shooter);
 
     assert.equal(shooter.y, 440);
   });
@@ -103,7 +103,7 @@ describe('Shooter', function() {
     let bubble  = new Bubble(225, 440, 10);
     let shooter = new Shooter(225, 440, 10);
 
-    board.spaceBarWasPressed(shooter);
+    board.shooterWasPressed(shooter);
 
     assert.equal(shooter.y, 11);
     assert.equal(bubble.y, 12);
