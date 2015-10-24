@@ -2,7 +2,6 @@ const chai   = require('chai');
 const assert = chai.assert;
 const Board  = require('../lib/board');
 const Bubble  = require('../lib/bubble');
-const Shooter  = require('../lib/shooter');
 
 describe('Board', function () {
 
