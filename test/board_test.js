@@ -5,10 +5,6 @@ const Bubble  = require('../lib/bubble');
 
 describe('Board', function () {
 
-  // beforeEach(function() {
-  //   sinon.spy(Bubble.prototype, 'draw');
-  // });
-
   it('can find its own boundaries', function () {
     let board = new Board(450, 450);
 
@@ -16,26 +12,35 @@ describe('Board', function () {
     assert.equal(board.width, 450);
   });
 
+  it('renders initial elements on page load', function() {
+    let board = new Board(450, 450);
+
+    assert.equal(220, board.bubbles.length);
+  });
+
   it('creates a new bubble upon shoot', function () {
     let board = new Board(450, 450);
-    let shooter = new shooter(225, 10, 10);
-    // let bubble = new Bubble(225, 10, 10);
+    let oldBubbleCount = board.bubbles.length;
+    let shooter = new Bubble(225, 10, 10);
 
     board.shooterWasPressed(shooter);
+    let newBubbleCount = board.bubbles.length
 
-    assert(spy.calledOnce());
+    assert.equal(oldBubbleCount, newBubbleCount - 1);
   });
 
-  it.skip('changes the shooter color upon shoot', function () {
+  it('adds new bubbles every five times the shooter is pressed', function() {
     let board = new Board(450, 450);
-    let shooter = new shooter(225, 10, 10);
+    let oldBubbleCount = board.bubbles.length;
+    let shooter = new Bubble(225, 10, 10);
 
-    board.shoot(shooter);
+    for (var i = 0; i < 5; i++) {
+      board.shooterWasPressed(shooter);
+    }
 
-    // assert that color has changed
+    let newBubbleCount = board.bubbles.length
+
+    assert.notEqual(oldBubbleCount, newBubbleCount);
   });
-
-  // afterEach(function() {
-  //   Bubble.prototype.draw.restore();
-  // });
 });
+
