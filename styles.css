@@ -1,21 +1,22 @@
 body {
-  padding-top: 8%;
   text-align: center;
   width: 90%;
 
-  background-image: url('http://columbineandcompany.com/wp-content/uploads/Bright-Soap-Bubbles2.jpg');
-  background-size: cover;
-
+  /*background-image: url('http://columbineandcompany.com/wp-content/uploads/Bright-Soap-Bubbles2.jpg');*/
+  /*background-size: cover;*/
+  background-color: lightgrey;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 20pt;
 }
+
+/*
+Dashboard---------------------------------------------------------------------*/
 
 .dashboard {
   display: inline-block;
   width: 40%;
   height: 450px;
-  padding: 1%;
-  border-radius: 10px;
+  padding-top: 5%;
 }
 
 .dashboard h1, h3, h6 {
@@ -24,11 +25,43 @@ body {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.dashboard h3, h6 {
-  margin-top: 5%;
+/*
+Scoreboard--------------------------------------------------------------------*/
+
+.scoreboard {
+  float: left;
+  display: inline-block;
+  border: 2px solid white;
+  width: 100%;
+  height: 200px;
+  margin-top: 8%;
+
+  background-color: rgba(225, 225, 225, 0.7);
+  border-radius: 10px;
 }
 
+#tries {
+  margin-top: 4%;
+  padding: 1%;
+}
+
+.scoreboard div {
+  height: 40%;
+}
+
+.hidden {
+  display: none;
+}
+
+.scoreboard.score {
+  margin-top: 30px;
+}
+
+/*
+Game--------------------------------------------------------------------------*/
+
 .game {
+  padding-top: 8%;
   float: right;
 }
 
