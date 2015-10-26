@@ -15,7 +15,7 @@ describe('Board', function () {
   it('renders initial elements on page load', function() {
     let board = new Board(450, 450);
 
-    assert.equal(200, board.bubbles.length);
+    assert.equal(201, board.bubbles.length);
   });
 
   it('creates a new bubble upon shoot', function () {
