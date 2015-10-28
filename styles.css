@@ -92,4 +92,14 @@ Game--------------------------------------------------------------------------*/
 
 .gameover h1 {
   font-size: 200px;
+  margin-bottom: 0;
+}
+
+.gameover button {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgba(225, 225, 225, 0.6);
+  border: none;
+  font-size: 20px;
 }
