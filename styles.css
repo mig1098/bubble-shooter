@@ -1,3 +1,8 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   text-align: center;
   width: 90%;
@@ -67,4 +72,24 @@ Game--------------------------------------------------------------------------*/
   border: 10px solid white;
   border-radius: 10px;
   background-color: rgba(225, 225, 225, 0.7);
+}
+
+/*
+---------------------------------------------------------------------Game Over*/
+
+.hidden {
+  display: none;
+}
+
+.gameover {
+  width: 100%;
+  height: 700px;
+  background-image: url('http://lovelace-media.imgix.net/uploads/491/d8bf2c20-31c5-0133-5b32-0aecee5a8273.gif?');
+  background-size: cover;
+  position: absolute;
+  z-index: 100;
+}
+
+.gameover h1 {
+  font-size: 200px;
 }
